@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * main - main arguments functions
- * @argc: argumnents
- * @argv: arguments
- * @envp: environment
- * Return: Always Success 0
+ * main - main arguments function.
+ * @argc: arguments c.
+ * @argv: arguments v.
+ * @envp: environment.
+ * Return: Always 0.
  */
 
 int main(int argc, char *argv[], char *envp[])
