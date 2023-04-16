@@ -11,14 +11,12 @@ int main(int argc __attribute__((unused)),
 		 char *argv[] __attribute__((unused)), char *envp[])
 {
 	struct stat st;
-	pid_t child;
 	char *pathValue, *getcommand, *lineptr = NULL;
 	size_t n;
-	int status;
 	char **allValuesPath, **user_command;
 
-	pathValue = _getenv("PATH");		  /*busca el valor de la var env PATH*/
-	allValuesPath = _get_path(pathValue); /*todos los valores del PATH*/
+	pathValue = _getenv("PATH");
+	allValuesPath = _get_path(pathValue);
 	while (1)
 	{
 		write(STDOUT_FILENO, "#cisfun$ ", 10);
@@ -33,20 +31,14 @@ int main(int argc __attribute__((unused)),
 		{
 			getcommand = _get_command(allValuesPath, user_command[0]);
 			if (getcommand == NULL)
-				perror("Command not found"); /*liberar memoria pendiente de revisar*/
+			{
+				free(getcommand);
+				perror("Command not found");
+			}
 		}
-		child = fork();
-		if (child == 0)
-		{
-			if (execve(getcommand, user_command, envp))
-				perror("./simple_shell");
-			exit(EXIT_FAILURE);
-		}
-		else
-			wait(&status);
+		_fork_function(getcommand, user_command, envp);
 	}
 	free(allValuesPath);
 	putchar('\n');
-	free(lineptr);
-	exit(status);
+	return (0);
 }

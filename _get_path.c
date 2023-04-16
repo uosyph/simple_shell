@@ -9,14 +9,20 @@ char **_get_path(char *path)
 {
     int index = 0, size = 100;
     char *symbol = ":";
-    char **path_absol = malloc(size);
     char *path_rela;
-    char *copyPath = malloc(_strlen(path) + 1);
+
+    char **path_absol = malloc((sizeof(char *) * size));
+    char *copyPath = malloc((sizeof(char) * 300));
+
+    if (copyPath == NULL || path_absol == NULL)
+    {
+        free(path_absol);
+        free(copyPath);
+        exit(EXIT_FAILURE);
+    }
 
     copyPath = strcpy(copyPath, path);
 
-    if (path_absol == NULL)
-        exit(EXIT_FAILURE);
     path_rela = strtok(copyPath, symbol);
     while (path_rela)
     {
@@ -25,5 +31,6 @@ char **_get_path(char *path)
         path_rela = strtok(NULL, symbol);
     }
     path_absol[index] = NULL;
+    free(copyPath);
     return (path_absol);
 }
