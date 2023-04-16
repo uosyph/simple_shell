@@ -7,14 +7,14 @@
  */
 char *_getenv(char *name)
 {
-	char *value = NULL, *pathname = "PATH";
-	int len = 4;
+	char *value = NULL;
+	int len = _strlen(name);
 	char **env;
 
 	env = environ;
 	while (*env != NULL)
 	{
-		if (strncmp(*env, pathname, len) == 0)
+		if (_strncmp(*env, name, len) == 0)
 		{
 			value = (*env) + (len + 1);
 			break;

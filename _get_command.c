@@ -10,16 +10,18 @@ char *_get_command(char **allValuesPath, char *user_command)
 {
     struct stat st;
     int value = 0, len = 0;
+    char *getcommand = NULL;
+    char **copyAllvaluesPath = NULL;
 
-    char *getcommand = malloc(200);
-    char **copyAllvaluesPath = malloc(100);
+    getcommand = malloc(200);
+    copyAllvaluesPath = malloc(100);
 
     while (allValuesPath[value] != NULL)
     {
         char *pathValue = allValuesPath[value];
 
         copyAllvaluesPath[value] = malloc((sizeof(char *) * 100));
-        copyAllvaluesPath[value] = strcpy(copyAllvaluesPath[value], pathValue);
+        copyAllvaluesPath[value] = _strcpy(copyAllvaluesPath[value], pathValue);
         value++;
     }
     value = 0;
