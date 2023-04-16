@@ -6,7 +6,6 @@
  * @src: string source.
  * Return: char pointer to destination.
  */
-
 char *_strcpy(char *dest, char *src)
 {
 	int i = 0;
