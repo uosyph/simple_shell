@@ -6,7 +6,6 @@
  *@src: second string.
  *Return: the destination.
  */
-
 char *_strcat(char *dest, char *src)
 {
     int d = 0, s = 0;
