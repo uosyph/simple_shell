@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * main - main arguments function.
- * @argc: arguments c.
- * @argv: arguments v.
+ * main - main function.
+ * @argc: arguments counter.
+ * @argv: arguments.
  * @envp: environment.
- * Return: Always 0.
+ * Return: Always 0 (_exit).
  */
 int main(int ac, char **av, char **env)
 {
