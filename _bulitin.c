@@ -19,10 +19,6 @@ void _exit_command(char **arg, char *lineptr, int _exit)
         exit(_exit);
     }
     exit_status = atoi(arg[1]);
-    if (exit_status < 0)
-        exit_status = 2;
-    if (exit_status > 232)
-        exit_status = 232;
 
     free(lineptr);
     free(arg);
