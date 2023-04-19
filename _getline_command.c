@@ -1,8 +1,7 @@
 #include "shell.h"
 
 /**
- * _getline_command - prints "#cisfun$ ",
- * and waits for user input.
+ * _getline_command - prints "$ ", and waits for user input.
  * Return: user input.
  */
 char *_getline_command(void)
