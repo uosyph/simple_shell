@@ -45,15 +45,3 @@ void _getenv(char **env)
         run++;
     }
 }
-
-/**
- *ctrl_c - avoids exiting when "ctrl + c" is pressed.
- *@signal: void.
- */
-void ctrl_c(int signal)
-{
-    (void)signal;
-
-    write(STDOUT_FILENO, "\n", 1);
-    write(STDOUT_FILENO, "$ ", 2);
-}
