@@ -16,12 +16,12 @@ A UNIX command interpreter written C.
 
 ## Table of Contents
 - [Introduction](#introduction)
-  - [What is Shell](#what-is-shell)
+  - [What is a Shell](#what-is-a-shell)
   - [What is it for](#what-is-it-for)
 
 ## Introduction
 
-### What is Shell
+### What is a Shell
 A **Shell** is a command-line interpreter, it is the program that provides a user interface to access the services of the operating system. Depending on the type of interface they use, shells can be of various types, in this case, a shell program of the type **`sh`** ([Bourne Shell](https://en.wikipedia.org/wiki/Bourne_shell)) will be developed. Users typically interact with a shell using a [terminal emulator](https://en.wikipedia.org/wiki/Terminal_emulator) that is used for entering data into and displaying or printing data from, a computer or a computing system.
 
 ### What is it for
