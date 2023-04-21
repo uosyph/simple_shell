@@ -14,6 +14,11 @@
 # Simple Shell
 A UNIX command interpreter written C.
 
+## Table of Contents
+- [Introduction](#introduction)
+  - [What is Shell](#what-is-shell)
+  - [What is it for](#what-is-it-for)
+
 ## Introduction
 
 ### What is Shell
