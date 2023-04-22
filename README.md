@@ -87,7 +87,7 @@ $
 - [Command-line interface](https://en.wikipedia.org/wiki/Command-line_interface)
 - [Unix shell](https://en.wikipedia.org/wiki/Unix_shell)
 - [sh (Bourne shell)](https://en.wikipedia.org/wiki/Bourne_shell)
-- [Write a Shell in C by *Stephen Brennan*](https://brennan.io/2015/01/16/write-a-shell-in-c/)
-- ["Writing Your Own Shell" chapter in **Introduction to Systems Programming** book by *Gustavo Rodriguez-Rivera*](https://www.cs.purdue.edu/homes/grr/SystemsProgrammingBook/Book/Chapter5-WritingYourOwnShell.pdf)
+- [**Write a Shell in C** by *Stephen Brennan*](https://brennan.io/2015/01/16/write-a-shell-in-c/)
+- [Chapter "**Writing Your Own Shell**" in the book "**Introduction to Systems Programming**" by *Gustavo Rodríguez-Rivera*](https://www.cs.purdue.edu/homes/grr/SystemsProgrammingBook/Book/Chapter5-WritingYourOwnShell.pdf)
 
 <p align="right"><a href="#readme-top">Back to Top</a></p>
