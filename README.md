@@ -11,8 +11,8 @@
     </p>
 </p>
 
-<h1 align="center">Simple Shell</h1>
-<p align="center">A UNIX command interpreter written in C, built to take in commands and execute text-based programs.</p> 
+# Simple Shell
+A UNIX command interpreter written in C, built to take in commands and execute text-based programs.
 
 ## Table of Contents
 - [Introduction](#introduction)
