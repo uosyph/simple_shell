@@ -17,9 +17,13 @@ A UNIX command interpreter written in C, built to take in commands and execute t
 ## Table of Contents
 - [Introduction](#introduction)
   - [What is a shell](#what-is-a-shell)
-  - [What is the purpose of a shell](#What-is-the-purpose-of-a-shell)
-  - [How does the shell provide a user environment](#How-does-the-shell-provide-a-user-environment)
-  - [How does the shell interpret user input](#How-does-the-shell-interpret-user-input)
+  - [What is the purpose of a shell](#what-is-the-purpose-of-a-shell)
+  - [How does the shell provide a user environment](#how-does-the-shell-provide-a-user-environment)
+  - [How does the shell interpret user input](#how-does-the-shell-interpret-user-input)
+- [Documentation](#documentation)
+  - [Compilation](#compilation)
+  - [Usage](#usage)
+  - [Files](#files)
 
 ## Introduction
 
@@ -38,6 +42,43 @@ The shell's environment is typically stored in the user's profile, for example i
 The shell interprets user input by reading the input and determining the command to be executed by looking at the first word of the input. The shell then searches for the command in the directories specified in the user's PATH environment variable. If the command is found, the shell executes it by creating a new process to run the command. The shell also provides a mechanism for redirecting input and output, allowing users to control where the output of a command is sent and where the input for a command comes from.
 
 The shell can also read input from the user using the read built-in command. The read command reads one line from the standard input and assigns the first word of the line to the first variable specified, the second word to the second variable, and so on. If no variables are specified, the line read is assigned to the variable REPLY. The shell also provides a mechanism for passing arguments to a command, allowing users to customize the behavior of a command by specifying options and arguments on the command line.
+
+## Documentation
+
+### Compilation
+How to compile the shell:
+
+```bash
+gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+```
+
+### Usage
+
+Working in interactive and non-interactive mode:
+
+```bash
+$ ./hsh
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+$
+```
+
+### Files
+
+|File|Description|
+|---|---|
+|[_builtin.c](_bulitin.c)|Built-ins functions exit and print environment.|
+|[_fork_function.c](_fork_function.c)|Create the fork function to execute the command typed by the user.|
+|[_get_path.c](_get_path.c)|Get the environment to find the PATH.|
+|[_get_token.c](_get_token.c)|Tokenize the strings.|
+|[_getline_command.c](_getline_command.c)|Print "**$**" and get user input.|
+|[_str_utils.c](_str_utils.c)|Auxiliary strings functions.|
+|[_strtok.c](_strtok.c)|String token functions.|
+|[_values_path.c](_values_path.c)|Concatenate the path with the command.|
+|[shell.h](shell.h)|Prototypes functions and headers.|
+|[simple_shell.c](simple_shell.c)|The shell functions.|
 
 
 <p align="right"><a href="#readme-top">Back to Top</a></p>
