@@ -24,6 +24,7 @@ A UNIX command interpreter written in C, built to take in commands and execute t
   - [Compilation](#compilation)
   - [Usage](#usage)
   - [Files](#files)
+- [Acknowledgements](#acknowledgements)
 
 ## Introduction
 
@@ -80,5 +81,13 @@ $
 |[shell.h](shell.h)|Prototypes functions and headers.|
 |[simple_shell.c](simple_shell.c)|The shell functions.|
 
+## Acknowledgements
+
+- [Command-line interpreters](https://en.wikipedia.org/wiki/List_of_command-line_interpreterss)
+- [Command-line interface](https://en.wikipedia.org/wiki/Command-line_interface)
+- [Unix shell](https://en.wikipedia.org/wiki/Unix_shell)
+- [sh (Bourne shell)](https://en.wikipedia.org/wiki/Bourne_shell)
+- [Write a Shell in C by *Stephen Brennan*](https://brennan.io/2015/01/16/write-a-shell-in-c/)
+- ["Writing Your Own Shell" chapter in **Introduction to Systems Programming** book by *Gustavo Rodriguez-Rivera*](https://www.cs.purdue.edu/homes/grr/SystemsProgrammingBook/Book/Chapter5-WritingYourOwnShell.pdf)
 
 <p align="right"><a href="#readme-top">Back to Top</a></p>
