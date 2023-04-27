@@ -8,21 +8,21 @@
  */
 char *_strcat(char *dest, char *src)
 {
-    int d = 0;
-    int s = 0;
+	int d = 0;
+	int s = 0;
 
-    while (dest[d] != '\0')
-    {
-        d++;
-    }
-    while (src[s] != '\0')
-    {
-        dest[d] = src[s];
-        d++;
-        s++;
-    }
-    dest[d] = '\0';
-    return (dest);
+	while (dest[d] != '\0')
+	{
+		d++;
+	}
+	while (src[s] != '\0')
+	{
+		dest[d] = src[s];
+		d++;
+		s++;
+	}
+	dest[d] = '\0';
+	return (dest);
 }
 
 /**
@@ -33,14 +33,14 @@ char *_strcat(char *dest, char *src)
  */
 int _strcmp(char *s1, char *s2)
 {
-    int a;
+	int a;
 
-    for (a = 0; s1[a] != '\0' && s2[a] != '\0'; a++)
-    {
-        if (s1[a] != s2[a])
-            return ((int)s1[a] - s2[a]);
-    }
-    return (0);
+	for (a = 0; s1[a] != '\0' && s2[a] != '\0'; a++)
+	{
+		if (s1[a] != s2[a])
+			return ((int)s1[a] - s2[a]);
+	}
+	return (0);
 }
 
 /**
@@ -50,18 +50,18 @@ int _strcmp(char *s1, char *s2)
  */
 int _strlen(char *s)
 {
-    int ch = 0;
+	int ch = 0;
 
-    while (*(s + ch) != '\0')
-    {
-        ch++;
-    }
+	while (*(s + ch) != '\0')
+	{
+		ch++;
+	}
 
-    return (ch);
+	return (ch);
 }
 
 /**
- * _strcmp - compares two strings.
+ * _strncmp - compares two strings.
  * @s1: the first string to compare.
  * @s2: the second string to compare.
  * @n: number of characters.
@@ -69,18 +69,18 @@ int _strlen(char *s)
  */
 size_t _strncmp(char *s1, char *s2, size_t n)
 {
-    size_t i, j;
+	size_t i, j;
 
-    for (j = 0; s1[j] != '\0' && j < n; j++)
-    {
-        i = s1[j] - s2[j];
+	for (j = 0; s1[j] != '\0' && j < n; j++)
+	{
+		i = s1[j] - s2[j];
 
-        if (i != 0)
-        {
-            return (i);
-        }
-    }
-    return (0);
+		if (i != 0)
+		{
+			return (i);
+		}
+	}
+	return (0);
 }
 
 /**
@@ -91,14 +91,14 @@ size_t _strncmp(char *s1, char *s2, size_t n)
  */
 char *_strcpy(char *dest, char *src)
 {
-    int i = 0;
+	int i = 0;
 
-    while (*(src + i) != '\0')
-    {
-        *(dest + i) = *(src + i);
-        ++i;
-    }
-    *(dest + i) = *(src + i);
+	while (*(src + i) != '\0')
+	{
+		*(dest + i) = *(src + i);
+		++i;
+	}
+	*(dest + i) = *(src + i);
 
-    return (dest);
+	return (dest);
 }

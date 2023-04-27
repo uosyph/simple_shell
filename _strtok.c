@@ -16,18 +16,18 @@ size_t _strcspn(const char *s1, const char *s2);
  **/
 char *_strtok(char *str, const char *delim)
 {
-    static char *p;
+	static char *p;
 
-    if (str)
-        p = str;
-    else if (!p)
-        return (0);
-    str = p + _strspn(p, delim);
-    p = str + _strcspn(str, delim);
-    if (p == str)
-        return (p = 0);
-    p = *p ? *p = 0, p + 1 : 0;
-    return (str);
+	if (str)
+		p = str;
+	else if (!p)
+		return (0);
+	str = p + _strspn(p, delim);
+	p = str + _strcspn(str, delim);
+	if (p == str)
+		return (p = 0);
+	p = *p ? *p = 0, p + 1 : 0;
+	return (str);
 }
 
 /**
@@ -40,15 +40,15 @@ char *_strtok(char *str, const char *delim)
  **/
 size_t _strcspn(const char *s1, const char *s2)
 {
-    size_t ret = 0;
+	size_t ret = 0;
 
-    while (*s1)
-    {
-        if (_strchr(s2, *s1))
-            return (ret);
-        s1++, ret++;
-    }
-    return (ret);
+	while (*s1)
+	{
+		if (_strchr(s2, *s1))
+			return (ret);
+		s1++, ret++;
+	}
+	return (ret);
 }
 
 /**
@@ -61,11 +61,11 @@ size_t _strcspn(const char *s1, const char *s2)
  **/
 size_t _strspn(const char *s1, const char *s2)
 {
-    size_t ret = 0;
+	size_t ret = 0;
 
-    while (*s1 && _strchr(s2, *s1++))
-        ret++;
-    return (ret);
+	while (*s1 && _strchr(s2, *s1++))
+		ret++;
+	return (ret);
 }
 
 /**
@@ -79,8 +79,8 @@ size_t _strspn(const char *s1, const char *s2)
  **/
 char *_strchr(const char *s, int c)
 {
-    while (*s != (char)c)
-        if (!*s++)
-            return (0);
-    return ((char *)s);
+	while (*s != (char)c)
+		if (!*s++)
+			return (0);
+	return ((char *)s);
 }

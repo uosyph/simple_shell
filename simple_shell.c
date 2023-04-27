@@ -2,9 +2,9 @@
 
 /**
  * main - main function.
- * @argc: arguments counter.
- * @argv: arguments.
- * @envp: environment.
+ * @ac: arguments counter.
+ * @av: arguments.
+ * @env: environment.
  * Return: Always 0 (_exit).
  */
 int main(int ac, char **av, char **env)
